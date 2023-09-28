@@ -1,0 +1,24 @@
+Preparation
+
+Create a vulnerable EC2 instance for each team with the necessary forensic challenges and tools pre-installed. This instance will serve as the target for forensic analysis.
+
+
+Challenge Scenarios
+
+Prepare different forensic scenarios, each associated with a specific EC2 instance. For example, one scenario could involve a malware infection, another a data breach, and another a network intrusion.
+
+
+Write a detailed challenge description for each scenario. Include background information about the incident, such as when it occurred and the suspected nature of the attack.
+
+Tool Usage
+
+Specify which forensic tools participants should use for each scenario. For instance, you can recommend using Volatility for memory analysis, Autopsy for disk forensics, or Wireshark for packet analysis.
+
+Evidence collection
+
+Populate the EC2 instances with evidence related to the respective scenarios. This may include disk images, memory dumps, log files, and other artifacts.
+
+
+Challenege description
+
+Write a detailed challenge description for each scenario. Include background information about the incident, such as when it occurred and the suspected nature of the attack.
