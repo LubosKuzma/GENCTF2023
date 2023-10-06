@@ -20,10 +20,14 @@
 - **Description**: Given a disk image, participants need to analyze the filesystem structure, metadata, hidden partitions, etc., to uncover hidden or deleted data.
 - **Tools**: `The Sleuth Kit (TSK)`, `Autopsy`, `binwalk`, etc.
 
-## 5. Mobile Forensics
-- **Description**: Provided with a backup or image of a mobile device, like Android or iOS, participants need to extract app data, messages, call logs, contacts, or other hidden information.
-- **Tools**: `UFED Cellebrite`, `AXIOM`, mobile phone dump parsers, etc.
+## Challenge 5 （Mobile Forensics）
+- **Description**: Provided with a backup or image of a mobile device (Android), participants need to extract app data, messages, call logs, contacts, or other hidden information.
+- **Flag**: genctf{53cr3tM!ss!0n@Ph0n3}
+- **Tools**: `SQLite Database Browser`, `grep`, `strings`, etc.
+- **Quick Guide**: Extract the provided data_backup.tar file to access the contents -->  Locate the SMS database file, found in `/data/data/com.android.providers.telephony/databases/mmssms.db` --> Use SQLite Database Browser to open the database file --> Browse through the tables and records to find the messages --> Look for unusual or encoded messages that could hide the flag
+- **hint**: Some messages are meant to be read and deleted immediately.
 
+  
 ## 6. Database Forensics
 - **Description**: Given a database backup or image, like MySQL, PostgreSQL, MongoDB, etc., participants need to analyze the data, uncover deleted or hidden records, or recover data from logs.
 - **Tools**: Database-specific query tools, `SQL parsers`, `database log analyzers`, etc.
