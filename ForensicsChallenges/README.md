@@ -11,7 +11,7 @@
 ## Challenge 3 （Network Forensics）
 - **Category**: Forensics
 - **Description**: Provided with a network traffic capture file (e.g., PCAP), participants need to analyze the traffic for signs that hides secret information.
-- **Flag**: CTF{TH1S_15_A_S3CRET_UR1}
+- **Flag**: genctf{TH1S_1S_@_5ECRET}
 - **Tools**: `Wireshark`, `tcpdump`, `tshark`, etc.
 - **Quick Guide**: For Wireshark, use Statistics --> Conversations --> TCP --> use Follow Stream check each stream --> we can find the hidden message in the tcp.stream eq 1 --> ROT 13 --> final flag
 - **hint**: N/A
