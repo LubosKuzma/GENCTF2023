@@ -5,7 +5,7 @@
   - **Category**: Steganography
   - **Description**: Brute force the passphrase to access the hidden text file within the image, where the flag is concealed in the file.
   - **Flag**: GENCTF{OBFU5CAT3D_FLAG}
-  - **Quick Guide**: First use a steganography tool like stegcracker which allows bruteforce of passpharase on the image to find the zip file hidden in the image find the compression method (.gz) and decompress it to find the text file, then either creaet a python script or suitable method to filter flag out of the obfuscated data in the text file (removing all the lowercase letters or filter only uppercase letter and special character from text file which is the flag).
+  - **Quick Guide**: First use a steganography tool like stegcracker which allows bruteforce of passpharase on the image to find the zip file hidden in the image find the compression method (.gz) and decompress it to find the text file, then either creaet a python script or suitable method to filter flag out of the obfuscated data in the text file (removing all the lowercase letters or filter only uppercase letter,digits and special character from text file which is the flag).
   - **Hint** - Within the ordinary, seek the extraordinary. Look for the elements that defies the pattern.
 
 ## Challenge 2
