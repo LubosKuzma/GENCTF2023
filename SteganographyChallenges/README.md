@@ -8,7 +8,7 @@
   - **Quick Guide**: First use a steganography tool like stegcracker which allows bruteforce of passpharase on the image to find the zip file hidden in the image find the compression method (.gz) and decompress it to find the text file, then either creaet a python script or suitable method to filter flag out of the obfuscated data in the text file (removing all the lowercase letters or filter only uppercase letter,digits and special character from text file which is the flag).
   - **Hint** - Within the ordinary, seek the extraordinary. Look for the elements that defies the pattern.
 
-## Challenge 2
+## Challenge 2 (Lion Rock)
   - **Category**: Steganography
   - **Description**: Participants are given a image with a zip and text file hidden in it using steganography which can extracted by entering a passpharase which will be hidden in the metadata of the image. The zip file is password protected which the particiant need will crack to get the flag (the password for zip file will not be simple rockyou list but the player have to apply specail rules to crack the password hashes) and the text file with zip file will have a hint regarding the possible password for zip file.
   - **Flag**: GENCTF{Pl@y1ng_W!th_Rul35}
