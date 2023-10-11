@@ -10,8 +10,8 @@
 - **Flag**: genctf{2023_TWVt60ryRHVt@_Win}
 - **Tools**: `Volatility`, `strings`, `Rekall`, etc.
 - **Quick Guide**: (Volatility 2)
-Profile Identification: Run the command `volatility -f Forensics_Challenge_2.mem imageinfo` to identify the correct profile for the memory dump using the imageinfo plugin in the Volatility Framework -->
-Registry Hive Listing: List the registry hives in the memory dump using the hivelist plugin by executing the command `volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 hivelist` -->
+-- Profile Identification: Run the command `volatility -f Forensics_Challenge_2.mem imageinfo` to identify the correct profile for the memory dump using the imageinfo plugin in the Volatility Framework -->
+-- Registry Hive Listing: List the registry hives in the memory dump using the hivelist plugin by executing the command `volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 hivelist` -->
 Keyword Search: Use strings to find a keyword by executing the command `strings Forensics_Challenge_2.mem | grep -i "genctf"`. The output shows Software\GenCTF indicating a potential registry key of interest -->
 Registry Key Inspection: In the hivelist output, locate the `\SystemRoot\System32\Config\SOFTWARE` Virtual address. Use the printkey plugin to inspect a specific registry key by executing the command `volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 printkey -o 0x0000f8a00011f010 -K "GenCTF"`, leading to the discovery of flag_part1 -->
 Process Listing: Use the pslist command to list all running processes and take note of any unusual or unknown processes by executing the command `volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 pslist`, find the suspicious process win7pre.exe and determine its PID -->
