@@ -1,8 +1,12 @@
 # Forensics Challenges List
 
 ## Challenge 1 (Log Analysis)
-- **Description**: Provided with a system or application log file, participants need to identify anomalous activities or signs of attacks and answer related questions.
+- **Category**: Forensics
+- **Description**: Participants are provided with a web server log file. Analyzing the logs reveals multiple attempts to access various endpoints of a web application. Amongst the regular entries, a rogue agent has left a secret message embedded within the logs, encoded to escape the prying eyes. Participants need to decode this secret message to uncover the flag.
+- **Flag**: genctf{secret_agent_404}
 - **Tools**: Log analysis tools, text processing tools like `grep`, `awk`, `sed`, etc.
+- **Quick Guide**: Analyzing the Log File by `cat`, `less`, `grep`, etc. --> To find all 404 error entries with `grep`: `grep '404' Forensics_Challenge_1.log` --> Identifying suspicious entries, pay attention to URL parameters, paths, and other strings that might be encoded --> find `nonexistent_page.php?error=Z2VuY3Rme3NlY3JldF9hZ2VudF80MDR9` --> Decode suspicious strings: `echo 'Z2VuY3Rme3NlY3JldF9hZ2VudF80MDR9' | base64 -d` --> find the flag
+- **Hint**: Sometimes what you're looking for is not found.
 
 ## Challenge 2 (Memory Forensics)
 - **Category**: Forensics
