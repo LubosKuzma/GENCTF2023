@@ -1,10 +1,10 @@
 # Forensics Challenges List
 
-## 1. Log Analysis
+## Challenge 1 (Log Analysis)
 - **Description**: Provided with a system or application log file, participants need to identify anomalous activities or signs of attacks and answer related questions.
 - **Tools**: Log analysis tools, text processing tools like `grep`, `awk`, `sed`, etc.
 
-## 2. Memory Forensics
+## Challenge 2 (Memory Forensics)
 - **Category**: Forensics
 - **Description**: Given a memory dump, participants need to extract information about the registry and process including attacker activities.
 - **Flag**: genctf{2023_TWVt60ryRHVt@_Win}
