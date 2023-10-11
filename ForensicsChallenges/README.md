@@ -5,8 +5,13 @@
 - **Tools**: Log analysis tools, text processing tools like `grep`, `awk`, `sed`, etc.
 
 ## 2. Memory Forensics
-- **Description**: Given a memory dump, participants need to extract information about malware or attacker activities.
-- **Tools**: `Volatility`, `Rekall`, etc.
+- **Category**: Forensics
+- **Description**: Given a memory dump, participants need to extract information about the registry and process including attacker activities.
+- **Flag**: genctf{2023_TWVt60ryRHVt@_Win}
+- **Tools**: `Volatility`, `strings`, `Rekall`, etc.
+- **Quick Guide**: (Volatility 2)
+- Profile Identification: Run the command volatility -f Forensics_Challenge_2.mem imageinfo to identify the correct profile for the memory dump using the imageinfo plugin in the Volatility Framework --> Registry Hive Listing: List the registry hives in the memory dump using the hivelist plugin by executing the command volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 hivelist --> Registry Key Inspection: In the hivelist output, locate the \SystemRoot\System32\Config\SOFTWARE Virtual address. Use the printkey plugin to inspect a specific registry key by executing the command volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 printkey -o 0x0000f8a00011f010 -K "GenCTF", leading to the discovery of flag_part1 --> Process Listing: Use the pslist command to list all running processes and take note of any unusual or unknown processes by executing the command volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 pslist, find the suspicious process win7pre.exe and determine its PID --> Process Memory Extraction: Utilize the memdump plugin to extract the memory of the identified process by executing the command volatility -f Forensics_Challenge_2.mem --profile=Win7SP1x64 memdump -p 2856 -D output_directory. This command will create a memory dump file for the process with PID 2856 and save it in the output_directory --> Flag Search: Use strings to search for the flag by executing the command strings 2856.dmp | grep "flag", iterate through the findings to locate flag_part2, then combine the two parts into the genctf{xxxxxx} format to obtain the complete flag  
+- **Hint**: Your journey will demand a keen eye for anomalies within the registry and running processes. Happy hunting!
 
 ## Challenge 3 （Network Forensics）
 - **Category**: Forensics
@@ -14,7 +19,7 @@
 - **Flag**: genctf{TH1S_1S_@_5ECRET}
 - **Tools**: `Wireshark`, `tcpdump`, `tshark`, etc.
 - **Quick Guide**: For Wireshark, use Statistics --> Conversations --> TCP --> use Follow Stream check each stream --> we can find the hidden message in the tcp.stream eq 1 --> ROT 13 --> final flag
-- **hint**: N/A
+- **Hint**: N/A
 
 ## 4. File System and Disk Analysis
 - **Description**: Given a disk image, participants need to analyze the filesystem structure, metadata, hidden partitions, etc., to uncover hidden or deleted data.
@@ -25,7 +30,7 @@
 - **Flag**: genctf{53cr3tM!ss!0n@Ph0n3}
 - **Tools**: `SQLite Database Browser`, `grep`, `strings`, etc.
 - **Quick Guide**: Extract the provided data_backup.tar file to access the contents -->  Locate the SMS database file, found in `/data/data/com.android.providers.telephony/databases/mmssms.db` --> Use SQLite Database Browser to open the database file --> Browse through the tables and records to find the messages --> Look for unusual or encoded messages that could hide the flag
-- **hint**: Some messages are meant to be read and deleted immediately.
+- **Hint**: Some messages are meant to be read and deleted immediately.
 
   
 ## 6. Database Forensics
