@@ -34,11 +34,12 @@
 ## Challenge 4 (Disk Forensics)
 - **Category**: Forensics
 - **Description**: Given a disk image, participants need to analyze the filesystem structure, metadata, hidden partitions, etc., to uncover hidden or deleted data.
-- Flag: genctf{disk_probe_247}
-- Quick Guide: Searching for Data Artifacts --> Recycle Bin --> find PNG file --> find key word "2023_Annual_Report". --> Tools --> File Search by Attributes: Name="2023" --> find `2023_Annual_Report.docx` (this file is encrypted) --> Use the same method to search for the keyword "gen" or "ctf" to discover `genctf.txt` --> Obtain the password, copy the password to the Docx document, open the document --> Find the string "ODY/NEU3TDU6RDwwQUNAMzYwYWNmTg==", guided by the image hints in the document, after base64 and ROT47 conversion, obtain the final flag.
--**Hint**: Are you sure you've emptied the recycle bin thoroughly?
-
+- **Flag**: genctf{disk_probe_247}
 - **Tools**: `The Sleuth Kit (TSK)`, `Autopsy`, `binwalk`, etc.
+- Quick Guide: Searching for Data Artifacts --> Recycle Bin --> find PNG file --> find key word "2023_Annual_Report". --> Tools --> File Search by Attributes: Name="2023" --> find `2023_Annual_Report.docx` (this file is encrypted) --> Use the same method to search for the keyword "gen" or "ctf" to discover `genctf.txt` --> Obtain the password, copy the password to the Docx document, open the document --> Find the string "ODY/NEU3TDU6RDwwQUNAMzYwYWNmTg==", guided by the image hints in the document, after base64 and ROT47 conversion, obtain the final flag.
+- **Hint**: Are you sure you've emptied the recycle bin thoroughly?
+
+
 
 ## Challenge 5 （Mobile Forensics）
 - **Category**: Forensics
