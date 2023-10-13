@@ -14,13 +14,13 @@
   - **Flag**: GENCTF{Pl@y1ng_W!th_Rul35}
   - **Quick Guide**: First use tools like exiftool to search the image metadata for password (P4ssword123456) which can be used to extract file hidden in the image. Once the text file and password protected zip file are extracted, read the text file which contains a hint for the password used for the zip file. Reverse search the image provided as the cover image or the original file which will shows the results **Sigiriya** and use the hints in the text file (which mentions to use rules to change i -> 1 and a ->4) and use the password (S1g1r1y4) to extract flag from the zip flag.
     
-## Challenge 3 
+## Challenge 3 (SpongeBob)
   - **Category**: Steganography
   - **Description**: In this challenge, participants are tasked with uncovering a secret message hidden within an image. The flag is concealed in the Least Significant Byte (LSB) of the image's pixel data.
   - **Flag**: GENCTF{S3cr3t_Fl@g_2023}
-  - **Quick Guide**: To solve the challenge either use a online available tool or create a python script which can extract data hidden in Least signficant byte of the image and the message extracted is the flag.
+  - **Quick Guide**: To solve the challenge either use a online available tool (https://github.com/RobinDavid/LSB-steganography) or create a python script which can extract data hidden in Least signficant byte of the image and the message extracted is the flag.
 
-## Challenge 4
+## Challenge 4 (Image)
   - **Category**: Steganography
   - **Description**: In this steganography challenge, participants are presented with an image that conceals a hidden text file. To extract the text file from the image, you must uncover the passphrase, which is ingeniously hidden within the image itself in base64 encoded format. The extracted text file contains base64-encoded data, which, when decoded, transforms into an image. This image is a QR code that, when scanned, reveals the coveted flag.
   - **Flag**: GENCTF{B@se64_T0_Im@g3}
@@ -33,9 +33,4 @@
   - **Flag**:GENCTF{Aud10_St3g@n0gr@phy}
   - **Quick Guide**: Use tools like steghide to extract the message hidden in the audio file (since no passphrase is used the message can extracted while leaving the passphrase empty). Once the hidden message is extracted which is encrypted using Ceasr Cipher, use a online tools to brute force the encrypted text to get the flag.
 
-## Challenge 6
-  - **Category**: Steganography
-  - **Description**: 
-  - **Flag**: 
-  - **Quick Guide**: 
 
