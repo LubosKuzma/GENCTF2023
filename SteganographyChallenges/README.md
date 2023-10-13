@@ -27,10 +27,10 @@
   - **Quick Guide**: First find the base64 encoded password (S3cureP455w0rd) hidden in the image file using tools like binwalk, base64 deocde the passpharse and use it to extract the text file from the image. The text file will have base64 data which can be converted to image using online base64 to image converter tools. The image from this conversion is a qr code, which can read using qr code reader and this contains the flag.
   - **Hint**: Base64 can be deocded into more than just text.
 
-## Challenge 5
+## Challenge 5 (Stormy Weather)
   - **Category**: Steganography
-  - **Description**: This steganography challenge, participants will be given a audio file which has a message hidden inside the file without any passphrase used. The message hidden is encoded with Caesar cipher, which the player have to solve to get the flag.
-  - **Flag**:GENCTF{Aud10_St3g@n0gr@phy}
-  - **Quick Guide**: Use tools like steghide to extract the message hidden in the audio file (since no passphrase is used the message can extracted while leaving the passphrase empty). Once the hidden message is extracted which is encrypted using Ceasr Cipher, use a online tools to brute force the encrypted text to get the flag.
+  - **Description**: This steganography challenge, participants will be given a image file which has a text file hidden. The text file holds a message which contains a pastebin address which is in an encoded format (participants are given hints in the text file message on what encoding is being used), they have decode the pastebin address and visit the it to get the flag.
+  - **Flag**:Genctf{St0rm_Is_C0ming}
+  - **Quick Guide**: Use any tool like **binwalk** or **steghide** to extract the text file from the image. The text file has pastebin address "https://pastebin.com/s3Lb9uPV", some parts of the address part of the pastbin address are encoded using Short Weather WKS cipher (WKS Cipher), which can be decoded using the online tools like "https://www.dcode.fr/wetterkurzschlussel-codes"; once the address is decode access the pastebin to retrieve the flag.
 
 
