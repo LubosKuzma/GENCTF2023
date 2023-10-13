@@ -1,6 +1,7 @@
 # Forensics Challenges List
 
-## Challenge 1 （Network Forensics）
+## Challenge 1 （Network Forensics） 
+- **Difficult**: ☆ 
 - **Category**: Forensics
 - **Description**: Provided with a network traffic capture file (e.g., PCAP), participants need to analyze the traffic for signs that hides secret information.
 - **Flag**: genctf{TH1S_1S_@_5ECRET}
@@ -11,6 +12,7 @@
   
 ## Challenge 2 (Log Analysis)
 - **Category**: Forensics
+- **Difficult**: ☆☆
 - **Description**: Participants are provided with a web server log file. Analyzing the logs reveals multiple attempts to access various endpoints of a web application. Amongst the regular entries, a rogue agent has left a secret message embedded within the logs, encoded to escape the prying eyes. Participants need to decode this secret message to uncover the flag.
 - **Flag**: genctf{secret_agent_404}
 - **Tools**: Log analysis tools, text processing tools like `grep`, `awk`, `sed`, etc.
@@ -19,6 +21,7 @@
 
 
 ## Challenge 3 （Network & File Forensics）
+- **Difficult**: ☆☆
 - **Category**: Forensics
 - **Description**: Provided with a network traffic capture file (e.g., PCAP), participants need to analyze the traffic for signs that hides secret information.
 - **Flag**: genctf{f7P2f7pisN0+5ecur1ty}
@@ -28,6 +31,7 @@
 
 
 ## Challenge 4 (Disk Forensics)
+- **Difficult**: ☆☆
 - **Category**: Forensics
 - **Description**: Given a disk image, participants need to analyze the filesystem structure, metadata, hidden partitions, etc., to uncover hidden or deleted data.
 - **Flag**: genctf{disk_probe_247}
@@ -37,6 +41,7 @@
 
 
 ## Challenge 5 （Mobile Forensics）
+- **Difficult**: ☆☆
 - **Category**: Forensics
 - **Description**: Provided with a backup or image of a mobile device (Android), participants need to extract app data, messages, call logs, contacts, or other hidden information.
 - **Flag**: genctf{53cr3tM!ss!0n@Ph0n3}
@@ -46,6 +51,7 @@
 
 
 ## Challenge 6 (Memory Forensics)
+- **Difficult**: ☆☆☆
 - **Category**: Forensics
 - **Description**: Given a memory dump, participants need to extract information about the registry and process including attacker activities.
 - **Flag**: genctf{2023_TWVt60ryRHVt@_Win}
