@@ -46,7 +46,7 @@
 - **Description**: Provided with a backup or image of a mobile device (Android), participants need to extract app data, messages, call logs, contacts, or other hidden information.
 - **Flag**: genctf{53cr3tM!ss!0n@Ph0n3}
 - **Tools**: `SQLite Database Browser`, `grep`, `strings`, etc.
-- **Quick Guide**: Extract the provided data_backup.tar file to access the contents -->  Locate the SMS database file, found in `/data/data/com.android.providers.telephony/databases/mmssms.db` --> Use SQLite Database Browser to open the database file --> Browse through the tables and records to find the messages --> Look for unusual or encoded messages that could hide the flag
+- **Quick Guide**: Extract the provided data_backup.tar file to access the contents -->  Locate the SMS database file, found in `/data/com.android.providers.telephony/databases/mmssms.db` --> Use SQLite Database Browser to open the database file --> Browse through the tables and records to find the messages --> Look for unusual or encoded messages that could hide the flag
 - **Hint**: Some messages are meant to be read and deleted immediately.
 
 
