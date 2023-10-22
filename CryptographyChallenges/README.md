@@ -3,6 +3,7 @@
 **Difficulty:** Easy? <br>
 **Category:** Cryptography <br>
 **Flag:** GENCTF{Rh1n0_b@k1ng_Cha11} <br>
+**Points:** 100
 **Description:** When discovered they will be provided with a zip file. The zip file contains 1 folder (Baking) and the folder contains 3 files: Cyber bakery job request.pdf, bakedGood.txt.gpg, bakedHint.txt. Most of the hints are found in Cyber bakery job request.pdf and the flag is inside of bakedGood.txt.gpg. To open the bakedGood file the pdf file provided a hint to the password. Once in the bakedGood.txt.gpg file they will need to use a tool like gpg to decrypt it(Password is the same). Inside of the bakedGood file will then be a recipe and an encrypted flag. If they want to uncover the flag they will need to baked the flag in reverse in cyberchef. Once they do that the flag will be presented: **GENCTF{Rh1n0_b@k1ng_Cha11}** <br>
 
 Recipe: <br>
